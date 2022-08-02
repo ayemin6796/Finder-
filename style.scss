@@ -1,0 +1,388 @@
+$primary:#fd5631;
+$navbar-light-hover-color:$primary;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+body{
+  font-size: 16px;
+}
+.bold-mid{
+  font-weight: 500;
+}
+
+// -------------- For Nav -------------
+.dropdown-self:hover .dropdown-menu{
+  display: block;
+  border-radius: 14px;
+  border:none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  i{
+    opacity: 0.5;
+  }
+}
+.navbar-nav .nav-item .nav-link{
+  transition: 0.2s linear;
+}
+.navbar-nav .nav-item:hover .nav-link{
+  color: $primary !important;
+}
+.dropdown-self .dropdown-menu .dropdown-item:hover{
+  background-color: transparent;
+  color: $primary;
+  .nav-icon{
+    opacity: 1;
+  }
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.nav-font{
+  font-size: 14px;
+}
+.nav-icon{
+  font-size: 16px;
+}
+.nav-equal{
+  margin-left: -2px;
+}
+.demo::after{
+  color: black;
+  height: 35px;
+}
+.special{
+  background-color: #ff4116;
+  color:white;
+  box-shadow: 0px 5px 8px #ffb7a6;
+  border-radius: 6px;
+}
+
+// ------------ Home Section -----------------
+.hero-text{
+  font-size: 22px;
+  font-weight: 500;
+  z-index: 9999;
+  width: 627px;
+}
+.hero-sec{
+  position: relative;
+}
+.hero-img{
+  width: 759px;
+  height: 614px;
+  position: absolute;
+  right: 6px;
+  top:-202px;
+  z-index: -1;
+}
+.hero-menu{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.hero-menu .dropdown-item:hover{
+  color: #fd5631 !important;
+  background-color: transparent;
+}
+.slide{
+  position: relative;
+}
+#slider{
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 12px;
+  background: #fd5631;
+  outline: none;
+}
+#slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 21px;
+  width: 21px;
+  background-color: white;
+  border: 4px solid #fd5631;
+  border-radius: 50%;
+  cursor: pointer;
+  Z-index:3;
+  position: relative;
+}
+#rangeValue{
+  position: absolute;
+    font-size: 12px;
+    background-color: whitesmoke;
+    padding: 5px 11px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px rgb(126 126 126);
+    font-weight: 700;
+    top: -28px;
+    left:38px;
+}
+
+.finder-nav{
+  position: absolute;
+  bottom: 180px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 900px;
+  z-index: 9999;
+  background-color: #ffffff;
+}
+
+// -------------- Catagories --------------
+.categories-icon{
+  background-color: #ffddd6;
+  padding: 16px 16px;
+  transition: linear 0.3s;
+}
+.categories-part{
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 18px;
+  transition: linear 0.3s;
+}
+.categories-part:hover{
+  box-shadow: rgba(63, 65, 66, 0.2) 0px 8px 24px;
+}
+.categories-part:hover .categories-icon{
+  background-color: #fd5631;
+  color: #ffffff;
+}
+.more{
+  margin-left: 34px !important;
+  margin-top:5px !important;
+  border: none;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.more .dropdown-item:hover{
+  color: $primary;
+}
+
+// -------------- Property --------------
+.property-box{
+  border-radius: 16px;
+}
+.property-box .property-btn{
+  border: 1px solid $primary;
+  color: #fd5631;
+  border-radius: 8px;
+}
+.property-box:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.property-box:hover .property-btn{
+  color: white;
+  background-color: #fd5631;
+}
+
+// ------------- OFfer --------------
+.offer:hover{
+  color: $primary !important;
+}
+.offer-card{
+  position: relative;
+  transition: ease-in-out 0.3s !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 15px;
+}
+.offer-card:hover{
+  box-shadow: rgba(149, 157, 165, 0.418) 0px 8px 24px;
+}
+.offer-card .card{
+  border-radius: 12px;
+}
+.offer-card .card-body:hover h6{
+  color: #fd5631;
+}
+.data{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.heart{
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.144);
+  backdrop-filter: opacity(0.2);
+}
+.offer-card:hover .heart{
+  display: block;
+}
+.my-carousel{
+  width: 1500px;
+}
+.own-slick-left{
+  position: absolute;
+  margin-top: 210px;
+  margin-left: -2%;
+}
+.own-slick-right{
+  position: absolute;
+  margin-top:210px;
+  margin-left: 70%;
+}
+// ----------------- Today Offer ------------------
+.smoke-bg{
+  background-color: #f5f5f5;
+}
+.today{
+  height: 552.5px;
+  width: 635px;
+  background-image:
+  linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(31,27,45,0.7903536414565826) 0%, rgba(255,255,255,0) 100%),
+url('./img/Today_img/01.jpg');
+  // background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7371323529411764) 0%, rgba(255,255,255,0.15730042016806722) 100%, url(./img/Today_img/01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.today-remind{
+  display: flex;
+  padding-top: 21px;
+  padding-left: 44px;
+}
+.today-info{
+  padding-bottom: 21px;
+}
+.today-link{
+  border-top-right-radius: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-right: 1px solid white;
+  background-color: rgb(245, 65, 21);
+}
+.today-link:hover,
+.today-btn:hover{
+  background-color: #fd2e00;
+  box-shadow: rgba(190, 110, 110, 0.2) 0px 20px 30px;
+}
+.today-btn{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 8px;
+  background-color: rgb(245, 65, 21);
+}
+.today-sec{
+  height: 261.25px;
+  background-image:
+  linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(31,27,45,0.7903536414565826) 0%, rgba(255,255,255,0) 100%),
+url('./img/Today_img/02.jpg');
+background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.today-trd{
+  height: 261.25px;
+  background-image:
+  linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(31,27,45,0.7903536414565826) 0%, rgba(255,255,255,0) 100%),
+url('./img/Today_img/03.jpg');
+background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+// --------------- Search ---------------
+.search-card{
+  border-radius: 16px;
+}
+.search-img{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.search-div{
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.search-div:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.search-progress{
+  visibility: hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #00000071;
+  width: 307.75px;
+  height: 237.34px;
+  margin-left: 1px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}  
+.search-div:hover .search-progress{
+  visibility: visible;
+
+}
+.slick-btns{
+  width: 35px;
+  padding:6px;
+  border-radius: 50%;
+  border:none;
+  background-color: #f5f5f5;
+}
+.slick-left{
+  position: absolute;
+  margin-top: 116px;
+  margin-left: -2%;
+}
+.slick-right{
+  position: absolute;
+  margin-top:116px;
+  margin-left: 69%;
+}
+
+// ------------ Partners ------------
+.partner-part{
+  position: relative;
+  transition: all 3s ease-in;
+}
+.convert-to{
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
+.partner-part:hover .convert-to{
+  visibility: visible;
+}
+
+// ------------- Agents -------------
+.esate_img{
+  border-radius: 11px;
+}
+.star{
+  color:#ffd700;
+}
+.facebook{
+  padding:12px 16px !important;
+}
+.final-icon{
+  padding:12px;
+  color:#272727;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.2s linear;
+}
+.final-icon:hover{
+  background-color: $primary;
+  color: white;
+}
+.quote{
+  position: absolute;
+  right: 37px;
+  top: -24px;
+  color:$primary;
+}
