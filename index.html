@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <title>Vite App</title>
@@ -13,7 +14,7 @@
   <body>
 
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="./img/logo-dark.svg" alt="" width="116">
@@ -24,190 +25,187 @@
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0 nav-font fw-bold">
           <li class="nav-item dropdown dropdown-self me-2 demo">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75" style="border-right: 1px solid #dddddd91;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-layer-group me-1"></i> Demos <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu px-3 py-3 border" aria-labelledby="navbarDropdown">
               <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+                <a class="dropdown-item px-0 bold-start" href="#">
                 <i class="fas fa-building me-1 nav-icon mx-auto"></i>  Real Estate Demo
               </a>
               </li>
-              <li><hr class="dropdown-divider mb-0"></li>
-              <li class="m-0 nav-font"><a class="dropdown-item px-0" href="#">
+              <li><hr class="dropdown-divider mb-1"></li>
+              <li class="m-0 nav-font "><a class="dropdown-item px-0 bold-start" href="#">
                 <i class="fas fa-car-side me-1 nav-icon mx-auto"></i> Car Finder Demo
               </a></li>
-              <li><hr class="dropdown-divider mb-0"></li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li><hr class="dropdown-divider mb-1"></li>
+              <li class="m-0 nav-font ">
+                <a class="dropdown-item px-0 bold-start" href="#">
                 <i class="fas fa-briefcase me-1 nav-icon mx-auto"></i> Job Board Demo
               </a></li>
-              <li><hr class="dropdown-divider mb-0"></li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li><hr class="dropdown-divider mb-1"></li>
+              <li class="m-0 nav-font ">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   <i class="fas fa-map-marker-alt me-1 nav-icon mx-auto"></i> City Guide Demo
                 </a></li>
-              <li><hr class="dropdown-divider mb-0"></li>
+              <li><hr class="dropdown-divider mb-1"></li>
               <li class="text-start m-0">
-                <a class="dropdown-item nav-font px-0 nav-equal" href="#">
+                <a class="dropdown-item nav-font px-0 nav-equal bold-start" href="#">
                   <i class="fas fa-home me-1 nav-icon ms-0"></i> Main Page
                 </a>
-                <a class="dropdown-item nav-font px-0" href="#">
-                  <i class="fas fa-bars me-1 nav-icon "></i> Components
+                <a class="dropdown-item nav-font px-0 bold-start" href="#">
+                  <i class="fas fa-bars me-1 nav-icon"></i> Components
                 </a>
-                <a class="dropdown-item nav-font px-0" href="#">
+                <a class="dropdown-item nav-font px-0 bold-start" href="#">
                   <i class="fas fa-file-alt me-1 nav-icon"></i> Documentation
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item dropdown dropdown-self me-2 ">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown dropdown-self me-2">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75 active" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Home <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu px-3 py-2 border" aria-labelledby="navbarDropdown">
               <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Home v.1
                 </a>
               </li>
-              <li class="m-0 nav-font"><a class="dropdown-item px-0" href="#">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Home v.2
-                </a>
               </a></li>
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-self me-2 ">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Catalog <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+            <ul class="dropdown-menu px-3 py-2 border" aria-labelledby="navbarDropdown">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Property for Rent
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Property for Sale
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Single Property v.1
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Single Property v.2
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-self me-2 ">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Account <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+            <ul class="dropdown-menu px-3 py-2 border" aria-labelledby="navbarDropdown">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Personal Info
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Password & Security
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Whitelist
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Reviews
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Notifications
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Sign In
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Sign Up
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-self me-2 ">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Vendor <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+            <ul class="dropdown-menu px-3 py-2 border" aria-labelledby="navbarDropdown">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Add Property
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Property Promotion
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Vendor Page : Properties
                 </a>
               </li>
               <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Vendor Page : review
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-self me-2 ">
-            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black" href="#" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle align-items-center pe-3 text-black opacity-75" href="#" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Pages <i class="fas fa-angle-down ms-1" style="font-size: 12px;"></i>
             </a>
-            <ul class="dropdown-menu px-4 py-2" aria-labelledby="navbarDropdown">
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+            <ul class="dropdown-menu px-3 py-2 border" aria-labelledby="navbarDropdown">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   About
                 </a>
 
               </li>
-              <li class="m-0 nav-font dropdown dropdown-self blog-dropdown">
-                <a href="#" class="dropdown-item px-0 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="m-0 nav-font dropdown blog-dropdown mb-1">
+                <a href="#" class="dropdown-item blog-drop px-0 dropdown-toggle bold-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Blog <i class="fas fa-angle-right" style="margin-left: 64px !important;"></i>
                 </a>
                 <ul class="dropdown-menu blog-menu shadow border-0">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item bold-start" href="#">Blog Grid</a></li>
+                  <li><a class="dropdown-item bold-start" href="#">Single Post</a></li>
                 </ul>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Contacts
                 </a>
               </li>
-              <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+              <li class="m-0 nav-font mb-1">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   Help Center
                 </a>
               </li>
               <li class="m-0 nav-font">
-                <a class="dropdown-item px-0" href="#">
+                <a class="dropdown-item px-0 bold-start" href="#">
                   404 not found
                 </a>
               </li>
@@ -216,11 +214,11 @@
         </ul>
         <form class="d-flex" role="search">
           <a href="#" class="nav-link">
-            <div class="fw-bold">
+            <div class="" style="font-weight: 700;">
               <i class="bi bi-person"></i> Sign In
             </div>
           </a>
-          <button class="btn special text-white nav-font fw-bold" type="submit"><i class="bi bi-plus-lg text-white me-1"></i> Add Property</button>
+          <button class="btn special text-white nav-font fw-bold" type="submit"><i class="bi bi-plus-lg text-white fw-bolder me-1"></i> Add Property</button>
         </form>
       </div>
     </div>
@@ -233,7 +231,7 @@
         <div class="d-flex justify-content-center align-items-center py-3">
           <div class="col-md-6" style="margin-top:65px;">
             <div class="overflow-visible mt-5">
-              <h2 class="display-4 fw-bold mt-5">Easy way to find
+              <h2 class="display-4 fw-bold mt-5 mb-4">Easy way to find
                 a perfect property</h2>
               <p class="text-black-50 hero-text mt-4">We provide a complete service for the sale, purchase or rental of real estate. We have been operating more than 10 years. Search millions of apartments and houses on Finder.</p>
             </div>
@@ -246,53 +244,53 @@
         </div>
         <div class="d-flex finder-nav">
           <a href="" class="" >
-            <div class="pe-5" style="border-right: 1px solid #bdbdbd;">
+            <div class="pe-5" style="border-right: 1px solid #d8d8d8;">
               <div class="nav-item dropdown text-black-50">
-                <a class="nav-link dropdown-toggle text-black hero-item text-black-50" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-house-door"></i> For rent <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
+                <a class="nav-link dropdown-toggle text-black hero-item text-black-50 bold-start" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-house-door me-1"></i> For rent <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
                 </a>
                 <ul class="dropdown-menu hero-menu">
-                  <li><a class="dropdown-item" href="#">For rent</a></li>
-                  <li><a class="dropdown-item" href="#">For sale</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">For rent</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">For sale</a></li>
                 </ul>
               </div>
             </div>
           </a>
           <a href="" class="">
-            <div class="pe-5"  style="border-right: 1px solid #bdbdbd;">
+            <div class="pe-5"  style="border-right: 1px solid #d8d8d8;">
               <div class="nav-item dropdown text-black-50">
-                <a class="nav-link dropdown-toggle text-black hero-item text-black-50" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-geo-alt"></i> Location <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
+                <a class="nav-link dropdown-toggle text-black hero-item text-black-50 bold-start" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-geo-alt me-1"></i> Location <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
                 </a>
                 <ul class="dropdown-menu hero-menu">
-                  <li><a class="dropdown-item" href="#">New York</a></li>
-                  <li><a class="dropdown-item" href="#">Chicago</a></li>
-                  <li><a class="dropdown-item" href="#">Los Angeles</a></li>
-                  <li><a class="dropdown-item" href="#">San Diego</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">New York</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Chicago</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Los Angeles</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">San Diego</a></li>
                 </ul>
               </div>
             </div>
           </a>
           
           <a href="" class="">
-            <div class="pe-5"  style="border-right: 1px solid #bdbdbd;">
-              <div class="nav-item dropup">
-                <a class="nav-link dropdown-toggle text-black hero-item text-black-50" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-list" width="20" height="20"></i> Property Type <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
+            <div class="pe-5"  style="border-right: 1px solid #d8d8d8;">
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-black hero-item text-black-50 bold-start" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-view-stacked me-1" width="20" height="20"></i> Property Type <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
                 </a>
                 <ul class="dropdown-menu hero-menu">
-                  <li><a class="dropdown-item" href="#">Houses</a></li>
-                  <li><a class="dropdown-item" href="#">Apartments</a></li>
-                  <li><a class="dropdown-item" href="#">Commercial</a></li>
-                  <li><a class="dropdown-item" href="#">Daily rental</a></li>
-                  <li><a class="dropdown-item" href="#">New buildings</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Houses</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Apartments</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Commercial</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">Daily rental</a></li>
+                  <li><a class="dropdown-item fw-normal" style="opacity: 0.85;" href="#">New buildings</a></li>
                 </ul>
               </div>
             </div>
           </a>
-          <a href="" class="text-decoration-none text-black">
-            <div class="nav-item text-black-50" style="padding: 8px 16px;">
-                <i class="bi bi-cash" width="20" height="20"></i> Cash <i class="bi bi-chevron-down" style="font-size: 12px;"></i>
+          <a href="#" class="text-decoration-none text-black">
+            <div class="nav-item text-black-50 bold-start hero-item" style="padding: 8px 16px;">
+                <i class="bi bi-cash me-1" width="20" height="20"></i> Price 
             </div>
           </a>
           <div class="slide me-2">
@@ -300,7 +298,7 @@
             <input type="range" min="0" max="1000" step="1" id="slider" value="450" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
           </div>
           <div class="">
-            <a href="" class="btn btn-primary text-white px-3 py-2" style="border-radius: 9px;"><i class="bi bi-search"></i></a>
+            <a href="" class="btn btn-primary text-white px-3 py-2 special" style="border-radius: 9px;"><i class="bi bi-search"></i></a>
           </div>
         </div>
       </div>
@@ -314,50 +312,48 @@
         <div class="d-flex justify-content-between">
           <div class="">
             <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part" style="width: 195px;height:132px;">
-              <div class="text-center">
-                <i class="fas fa-home rounded rounded-circle categories-icon" style="font-size: 20px;"></i> <br>
-                <h6 class="text-black fw-bold mt-2 opacity-75">Houses</h6>
+              <div class="categories-icon">
+                <i class="fas fa-home"></i> <br>
               </div>
+              <h6 class="text-black fw-bold mt-2 opacity-75">Houses</h6>
             </a>
           </div>
           <div class="">
             <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part" style="width: 195px;height:132px;">
-              <div class="text-center">
-                <i class="fas fa-building rounded rounded-circle categories-icon" style="font-size: 20px;padding: 16px 17px;"></i> <br>
-                <h6 class="text-black fw-bold mt-2 opacity-75">Apartments</h6>
-              </div>
+              <div class="categories-icon">
+                <i class="fas fa-building"></i> <br>
+                
+              </div><h6 class="text-black fw-bold mt-2 opacity-75">Apartments</h6>
             </a>
           </div>
           <div class="">
             <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part" style="width: 195px;height:132px;">
-              <div class="text-center">
-                <i class="bi bi-shop rounded rounded-circle categories-icon" style="font-size: 20px;padding: 12px 16px;"></i><br>
-                <h6 class="text-black fw-bold opacity-75"  style="margin-top: 18px;">Commercial</h6>
-              </div>
+              <div class="text-center categories-icon">
+                <i class="bi bi-shop"></i><br>
+                 </div><h6 class="text-black fw-bold mt-2 opacity-75">Commercial</h6>
             </a>
           </div>
           <div class="">
             <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part" style="width: 195px;height:132px;">
-              <div class="text-center">
-                <i class="fas fa-receipt rounded rounded-circle categories-icon" style="font-size: 20px;padding: 16px 19px;"></i> <br>
-                <h6 class="text-black fw-bold mt-2 opacity-75" >Daily Rental</h6>
-              </div>
+              <div class="text-center categories-icon">
+                <i class="fas fa-receipt"></i> <br>
+                
+              </div><h6 class="text-black fw-bold mt-2 opacity-75" >Daily Rental</h6>
             </a>
           </div>
           <div class="">
             <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part" style="width: 195px;height:132px;">
-              <div class="text-center">
-                <i class="bi bi-check-circle rounded-circle categories-icon" style="font-size: 20px;padding: 12px 16px;"></i><br>
-                <h6 class="text-black fw-bold opacity-75" style="margin-top:18px;">Right Choice</h6>
-              </div>
+              <div class="text-center categories-icon">
+                <i class="fas fa-check-circle"></i>
+                
+              </div><h6 class="text-black fw-bold mt-2 opacity-75">Right Choice</h6>
             </a>
           </div>
-          <div class="dropdown">
-            <a href="" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part dropdown-toggle" style="width: 195px;height:132px;" data-bs-toggle="dropdown" aria-expanded="false">
-              <div class="text-center">
-                <i class="bi bi-three-dots rounded-circle categories-icon"  style="font-size: 32px;padding: 6px 12px;"></i><br>
-                <h6 class="text-black fw-bold opacity-75" style="margin-top: 10px;">More</h6>
-              </div>
+          <div class="dropdown more-head">
+            <a href="#" class="card text-decoration-none align-items-center justify-content-center py-5 px-5 categories-part dropdown-toggle" style="width: 195px;height:132px;display: flex;" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="text-center categories-icon">
+                <i class="fas fa-ellipsis-h"></i><br>
+              </div><h6 class="text-black fw-bold opacity-75" style="margin-top: 10px;">More</h6>
             </a>
             <ul class="dropdown-menu more" style="margin-left: 34px;width: 8rem;" >
               <li><a class="dropdown-item bold-mid" href="#"><i class="fas fa-bed opacity-75 me-2"></i>Room</a></li>
@@ -379,9 +375,11 @@
           <div class="col-sm-4" style="width: 420px;">
             <div class=" text-center property-box" style="padding: 35px 28px;">
               <a href="" class="text-decoration-none">
-                <img src="./img/buy.svg" alt="" class="w-50">
-                <h6 class="text-black mt-4 mb-2 fs-3 bold-mid">Buy a property</h6>
-                <p class="text-black bold-mid opacity-75" style="font-size: 15px;font-weight:400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus repellat animi voluptas libero unde dicta ut neque debitis.</p>
+                <img src="./img/buy.svg" alt="" class="w-50 mb-1">
+                <h6 class="text-black mt-4 mb-2 fs-4" style="font-weight: 650;">Buy a property</h6>
+                <p class="text-black opacity-50" style="font-size: 15px;font-weight:500;">Blandit lorem dictum in velit.Et nisi at faucibus
+                  mauris pretium enim.Risus sapien nisi aliquam
+                              egestas leo dignissim.</p>
                 <button class="btn py-2 px-4 fw-bold property-btn mt-2">Find a home</button>
               </a>
             </div>
@@ -389,9 +387,11 @@
           <div class="col-sm-4" style="width: 420px;">
             <div class=" text-center property-box" style="padding: 35px 28px;">
               <a href="" class="text-decoration-none">
-                <img src="./img/sell.svg" alt="" class="w-50">
-                <h6 class="text-black mt-4 mb-2 fs-3 bold-mid">Sell a property</h6>
-                <p class="text-black bold-mid opacity-75" style="font-size: 15px;font-weight:400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus repellat animi voluptas libero unde dicta ut neque debitis.</p>
+                <img src="./img/sell.svg" alt="" class="w-50 mb-1">
+                <h6 class="text-black mt-4 mb-2 fs-4" style="font-weight: 650;">Sell a property</h6>
+                <p class="text-black opacity-50" style="font-size: 15px;font-weight:500;">Amet,cras orci justo,tortor nisl aliquet.Enim
+                  tincidunt tellus nunc,nulla arcu posuere quis.Velit
+                           turpis orci venenatis.</p>
                 <button class="btn py-2 px-4 fw-bold property-btn mt-2">Place an ad</button>
               </a>
             </div>
@@ -399,9 +399,11 @@
           <div class="col-sm-4" style="width: 420px;">
             <div class=" text-center property-box" style="padding: 35px 28px;">
               <a href="" class="text-decoration-none">
-                <img src="./img/rent.svg" alt="" class="w-50">
-                <h6 class="text-black mt-4 mb-2 fs-3 bold-mid">Rent a property</h6>
-                <p class="text-black bold-mid opacity-75" style="font-size: 15px;font-weight:400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus repellat animi voluptas libero unde dicta ut neque debitis.</p>
+                <img src="./img/rent.svg" alt="" class="w-50 mb-1">
+                <h6 class="text-black mt-4 mb-2 fs-4" style="font-weight: 650;">Rent a property</h6>
+                <p class="text-black opacity-50" style="font-size: 15px;font-weight:500;">Sed sed aliquet sed id purus malesuada congue
+                  viverra.Habitant quis lacus,volutpat natoque
+                             ipsum iaculis cursus.</p>
                 <button class="btn py-2 px-4 fw-bold property-btn mt-2">Find a rental</button>
               </a>
             </div>
@@ -416,195 +418,139 @@
     <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between">
-          <h3>Top offers</h3>
+          <h3 class="fw-bold">Top offers</h3>
           <a href="" class="text-decoration-none text-black offer">
             <span class="me-2">View all</span><i class="bi bi-arrow-right" style="font-size: 19px;"></i>
           </a>
         </div>
       </div>
-      <div class="row py-5">
-        <div class="my-carousel">
-          <div class="col-md-3 offer-card">
-            <div class="card">
-              <div class="card-img overflow-hidden">
-                <img src="img/offer_img/01.jpg" alt="" class="card-img-top" style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+      <div class="row pt-3 pb-5">
+        <div class="my-carousel my-3">
+          <div class="">
+            <div class="card offer-card my-1 mx-2 border-0">
+              <img src="./img/offer_img/01.jpg" alt="" class="card-img-top position-relative offer-img">
+              <div class="heart-overlay position-absolute">
+                <i class="far fa-heart new-heart text-primary"></i>
+              </div>
+              <div class="noti-overlay">
+                <p class="bg-success small bold-mid text-white d-inline-block py-0 px-2 rounded-2 m-0 mb-1">Varified</p> <br>
+                <p class="small bold-mid text-white d-inline-block py-0 px-2 rounded-2" style="background-color: #0d6efd;">new</p>
               </div>
               <div class="card-body">
-                <div class="">
-                  <p class="text-primary mb-2" style="font-size: 13px;">FOR RENT</p>
-                  <h6 class="fw-bold m-0 mb-2" style="font-size: 18px;opacity: 0.85;">3-bed Apartment | 67 sq.m</h6>
-                  <p class="opacity-50 mb-0" style="font-size: 15px;">3811 Ditmars Blvd Astoria, NY 11105</p>
-                  <div class="d-flex align-items-center mt-0">
-                    <i class="bi bi-cash me-2 opacity-50" style="font-size: 21px;"></i> <span class="fw-bold" style="opacity: 0.75;"> $1,629</span>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-center" style="opacity: 0.8;">
-                    <div class="me-3">
-                      3 <i class="fas fa-bed opacity-75"></i>
-                    </div>
-                    <div class="mx-2">
-                      2 <i class="fas fa-bath opacity-75"></i>
-                    </div>
-                    <div class="ms-3">
-                      2 <i class="fas fa-car-side opacity-75"></i>
-                    </div>
-                  </div>
+                <p class="small text-primary mb-1">FOR RENT</p>
+                <h5 class="fw-bold offer-head" style="font-size: 18px;">3-Bed Apartment | 67 sq.m</h5>
+                <p class=" opacity-50 bold-mid mt-0 mb-2" style="font-size: 15px;">3811 Ditmars Blvd Astoria, NY 11105</p>
+                <h5 class="mt-0"><i class="bi bi-cash-coin text-black-50 "></i> <span class="opacity-75 fs-6 fw-bold">$1,629</span> </h5><hr class="mb-0">
+              </div>
+
+                <div class="d-flex justify-content-center mt-0">
+                  <p class="me-2"> <span class="opacity-75">3</span> <i class="fas fa-bed  opacity-50"></i></p>
+                  <p class="mx-2"> <span class="opacity-75">2</span> <i class="fas fa-bath  opacity-50"></i></p>
+                  <p class="ms-2"> <span class="opacity-75">2</span> <i class="fas fa-car  opacity-50"></i></p>
                 </div>
-              </div>
-              <div class="data" style="z-index: 9999;">
-                <a href="#" class="btn text-white btn-sm mb-1 rounded-3" style="background-color: #07c98b;font-size: 14px;font-weight: 400;padding: 2px 6px;">Varified</a> <br>
-                <a href="#" class="btn btn-sm text-white rounded-3" style="background-color: #0d6efd;padding: 2px 6px;">New</a>
-              </div>
-              <div class="heart" style="border-top-right-radius: 9px;width: 322px;height: 210.15px;border-top-left-radius: 12px;">
-                <i class="far fa-heart text-primary px-2 py-2 small bg-white rounded-circle" style="margin-top: 15px;margin-left: 276px;"></i>
-              </div>
             </div>
           </div>
-          <div class="col-md-3 offer-card">
-            <div class="card" style="width: 324px;height:412.55px;">
-              <div class="card-img overflow-hidden">
-                <img src="img/offer_img/02.jpg" alt="" class="card-img-top" style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+
+          <div class="">
+            <div class="card offer-card my-1 mx-2 border-0">
+              <img src="./img/offer_img/02.jpg" alt="" class="card-img-top position-relative offer-img">
+              <div class="heart-overlay position-absolute">
+                <i class="far fa-heart new-heart text-primary"></i>
+              </div>
+              <div class="noti-overlay">
+                <p class="bg-success small bold-mid text-white d-inline-block py-0 px-2 rounded-2 m-0">Varified</p> <br>
               </div>
               <div class="card-body">
-                <div class="">
-                  <p class="text-primary mb-2" style="font-size: 13px;">FOR SALE</p>
-                  <h6 class="fw-bold m-0 mb-2" style="font-size: 18px;opacity: 0.85;">Family Home | 120 sq.m</h6>
-                  <p class="opacity-50 mb-0" style="font-size: 15px;">67-04 Myrtle Ave Glendale, NY 11385</p>
-                  <div class="d-flex align-items-center mt-0">
-                    <i class="bi bi-cash me-2 opacity-50" style="font-size: 21px;"></i> <span class="fw-bold" style="opacity: 0.75;"> $84,000</span>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-center" style="opacity: 0.8;">
-                    <div class="me-3">
-                      4 <i class="fas fa-bed opacity-75"></i>
-                    </div>
-                    <div class="mx-2">
-                      2 <i class="fas fa-bath opacity-75"></i>
-                    </div>
-                    <div class="ms-3">
-                      2 <i class="fas fa-car-side opacity-75"></i>
-                    </div>
-                  </div>
+                <p class="small text-primary mb-1">FOR SALE</p>
+                <h5 class="fw-bold offer-head"  style="font-size: 18px;">Family Home | 120 sq.m</h5>
+                <p class=" opacity-50 bold-mid mt-0 mb-2" style="font-size: 15px;">67-04 Myrtle Ave Glendale, NY 11385</p>
+                <h5 class="mt-0"><i class="bi bi-cash-coin text-black-50 "></i> <span class="opacity-75 fs-6 fw-bold">$84,000</span> </h5><hr class="mb-0">
+              </div>
+
+                <div class="d-flex justify-content-center mt-0">
+                  <p class="me-2"> <span class="opacity-75">4</span> <i class="fas fa-bed opacity-50"></i></p>
+                  <p class="mx-2"> <span class="opacity-75">2</span> <i class="fas fa-bath opacity-50"></i></p>
+                  <p class="ms-2"> <span class="opacity-75">2</span> <i class="fas fa-car opacity-50"></i></p>
                 </div>
-              </div>
-              <div class="data" style="z-index: 9999;">
-                <a href="#" class="btn text-white btn-sm mb-1 rounded-3" style="background-color: #07c98b;font-size: 14px;font-weight: 400;padding: 2px 6px;">Varified</a> <br>
-                <a href="#" class="btn btn-sm text-white rounded-3" style="background-color: #e92020;padding: 2px 6px;">Featured</a>
-              </div>
-              <div class="heart" style="border-top-right-radius: 9px;width: 322px;height: 210.15px;border-top-left-radius: 12px;">
-                <i class="far fa-heart text-primary px-2 py-2 small bg-white rounded-circle" style="margin-top: 15px;margin-left: 276px;"></i>
-              </div>
             </div>
           </div>
-          <div class="col-md-3 offer-card">
-            <div class="card" style="width: 324px;height:412.55px;">
-              <div class="card-img overflow-hidden">
-                <img src="img/offer_img/03.jpg" alt="" class="card-img-top" style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+          
+          <div class="">
+            <div class="card offer-card  my-1 mx-2 border-0">
+              <img src="./img/offer_img/03.jpg" alt="" class="card-img-top position-relative offer-img">
+              <div class="heart-overlay position-absolute">
+                <i class="far fa-heart new-heart text-primary"></i>
+              </div>
+              <div class="noti-overlay">
+                <p class="bg-success small bold-mid text-white d-inline-block py-0 px-2 rounded-2 m-0 mb-1">Varified</p> <br>
+                <p class="small bold-mid text-white d-inline-block py-0 px-2 rounded-2" style="background-color: #0d6efd;">new</p>
               </div>
               <div class="card-body">
-                <div class="">
-                  <p class="text-primary mb-2" style="font-size: 13px;">FOR RENT</p>
-                  <h6 class="fw-bold m-0 mb-2" style="font-size: 18px;opacity: 0.85;">Greenpoint Rentals | 85 sq.m</h6>
-                  <p class="opacity-50 mb-0" style="font-size: 15px;">1520 Castle Hill Ave Bronz, NY 10462</p>
-                  <div class="d-flex align-items-center mt-0">
-                    <i class="bi bi-cash me-2 opacity-50" style="font-size: 21px;"></i> <span class="fw-bold" style="opacity: 0.75;"> $1,330</span>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-center" style="opacity: 0.8;">
-                    <div class="me-3">
-                      1 <i class="fas fa-bed opacity-75"></i>
-                    </div>
-                    <div class="mx-2">
-                      1 <i class="fas fa-bath opacity-75"></i>
-                    </div>
-                    <div class="ms-3">
-                      1 <i class="fas fa-car-side opacity-75"></i>
-                    </div>
-                  </div>
+                <p class="small text-primary mb-1">FOR RENT</p>
+                <h5 class="fw-bold offer-head"  style="font-size: 18px;">Greenpoint Rentals | 85 sq.m</h5>
+                <p class=" opacity-50 bold-mid mt-0 mb-2" style="font-size: 15px;">1520 Castle Hill Ave Bronz, NY 10462</p>
+                <h5 class="mt-0"><i class="bi bi-cash-coin text-black-50 "></i> <span class="opacity-75 fs-6 fw-bold">$1,330</span> </h5><hr class="mb-0">
+              </div>
+
+                <div class="d-flex justify-content-center mt-0">
+                  <p class="me-2"> <span class="opacity-75">1</span> <i class="fas fa-bed opacity-50"></i></p>
+                  <p class="mx-2"> <span class="opacity-75">1</span> <i class="fas fa-bath opacity-50"></i></p>
+                  <p class="ms-2"> <span class="opacity-75">1</span> <i class="fas fa-car opacity-50"></i></p>
                 </div>
-              </div>
-              <div class="data" style="z-index: 9999;">
-                <a href="#" class="btn text-white btn-sm mb-1 rounded-3" style="background-color: #07c98b;font-size: 14px;font-weight: 400;padding: 2px 6px;">Varified</a> <br>
-              </div>
-              <div class="heart" style="border-top-right-radius: 9px;width: 322px;height: 210.15px;border-top-left-radius: 12px;">
-                <i class="far fa-heart text-primary px-2 py-2 small bg-white rounded-circle" style="margin-top: 15px;margin-left: 276px;"></i>
-              </div>
             </div>
           </div>
-          <div class="col-md-3 offer-card">
-            <div class="card" style="width: 324px;height:412.55px;">
-              <div class="card-img overflow-hidden">
-                <img src="img/offer_img/04.jpg" alt="" class="card-img-top" style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+         
+          <div class="">
+            <div class="card offer-card my-1 mx-2 border-0">
+              <img src="./img/offer_img/04.jpg" alt="" class="card-img-top position-relative offer-img">
+              <div class="heart-overlay position-absolute">
+                <i class="far fa-heart new-heart text-primary"></i>
+              </div>
+              <div class="noti-overlay">
+                <p class="bg-success small bold-mid text-white d-inline-block py-0 px-2 rounded-2 m-0 mb-1">Varified</p> <br>
+                <p class="small bg-danger bold-mid text-white d-inline-block py-0 px-2 rounded-2" >Featured</p>
               </div>
               <div class="card-body">
-                <div class="">
-                  <p class="text-primary mb-2" style="font-size: 13px;">FOR SALE</p>
-                  <h6 class="fw-bold m-0 mb-2" style="font-size: 18px;opacity: 0.85;">Studio | 32 sq.m</h6>
-                  <p class="opacity-50 mb-0" style="font-size: 15px;">140-60 Beech Ave Flushing, NY 11355</p>
-                  <div class="d-flex align-items-center mt-0">
-                    <i class="bi bi-cash me-2 opacity-50" style="font-size: 21px;"></i> <span class="fw-bold" style="opacity: 0.75;"> $65,000</span>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-center" style="opacity: 0.8;">
-                    <div class="me-3">
-                      1 <i class="fas fa-bed opacity-75"></i>
-                    </div>
-                    <div class="mx-2">
-                      1 <i class="fas fa-bath opacity-75"></i>
-                    </div>
-                    <div class="ms-3">
-                      2 <i class="fas fa-car-side opacity-75"></i>
-                    </div>
-                  </div>
+                <p class="small text-primary mb-1">FOR SALE</p>
+                <h5 class="fw-bold offer-head" style="font-size: 18px;">Studio | 32 sq.m</h5>
+                <p class=" opacity-50 bold-mid mt-0 mb-2"  style="font-size: 15px;">140-60 Beech Ave Flushing, NY 11355</p>
+                <h5 class="mt-0"><i class="bi bi-cash-coin text-black-50 "></i> <span class="opacity-75 fw-bold fs-6">$65,000</span> </h5><hr class="mb-0">
+              </div>
+
+                <div class="d-flex justify-content-center mt-0">
+                  <p class="me-2"> <span class="opacity-75">1</span> <i class="fas fa-bed opacity-50"></i></p>
+                  <p class="mx-2"> <span class="opacity-75">1</span> <i class="fas fa-bath opacity-50"></i></p>
+                  <p class="ms-2"> <span class="opacity-75">2</span> <i class="fas fa-car opacity-50"></i></p>
                 </div>
-              </div>
-              <div class="data" style="z-index: 9999;">
-                <a href="#" class="btn text-white btn-sm mb-1 rounded-3" style="background-color: #07c98b;font-size: 14px;font-weight: 400;padding: 2px 6px;">Varified</a> <br>
-                <a href="#" class="btn btn-sm text-white rounded-3" style="background-color: #0d6efd;padding: 2px 6px;">New</a>
-              </div>
-              <div class="heart" style="border-top-right-radius: 9px;width: 322px;height: 210.15px;border-top-left-radius: 12px;">
-                <i class="far fa-heart text-primary px-2 py-2 small bg-white rounded-circle" style="margin-top: 15px;margin-left: 276px;"></i>
-              </div>
             </div>
           </div>
-          <div class="col-md-3 offer-card">
-            <div class="card" style="width: 324px;height:412.55px;">
-              <div class="card-img overflow-hidden">
-                <img src="img/offer_img/05.jpg" alt="" class="card-img-top" style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+         
+          <div class="">
+            <div class="card offer-card my-1 mx-2 border-0">
+              <img src="./img/offer_img/05.jpg" alt="" class="card-img-top position-relative offer-img">
+              <div class="heart-overlay position-absolute">
+                <i class="far fa-heart new-heart text-primary"></i>
               </div>
+              <div class="noti-overlay">
+                <p class="bg-success small bold-mid text-white d-inline-block py-0 px-2 rounded-2 m-0 mb-1">Varified</p>              </div>
               <div class="card-body">
-                <div class="">
-                  <p class="text-primary mb-2" style="font-size: 13px;">FOR SALE</p>
-                  <h6 class="fw-bold m-0 mb-2" style="font-size: 18px;opacity: 0.85;">Cottage | 120 sq.m</h6>
-                  <p class="opacity-50 mb-0" style="font-size: 15px;">42 Broadway New York, NY 10004</p>
-                  <div class="d-flex align-items-center mt-0">
-                    <i class="bi bi-cash me-2 opacity-50" style="font-size: 21px;"></i> <span class="fw-bold" style="opacity: 0.75;"> $184,000</span>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-center" style="opacity: 0.8;">
-                    <div class="me-3">
-                      4 <i class="fas fa-bed opacity-75"></i>
-                    </div>
-                    <div class="mx-2">
-                      2 <i class="fas fa-bath opacity-75"></i>
-                    </div>
-                    <div class="ms-3">
-                      1 <i class="fas fa-car-side opacity-75"></i>
-                    </div>
-                  </div>
+                <p class="small text-primary mb-1">FOR SALE</p>
+                <h5 class="fw-bold offer-head" style="font-size: 18px;">Cottage | 120 sq.m</h5>
+                <p class=" opacity-50 bold-mid mt-0 mb-2" style="font-size: 15px;">42 Broadway New York, NY 10004</p>
+                <h5 class="mt-0"><i class="bi bi-cash-coin text-black-50 "></i> <span class="opacity-75 fw-bold fs-6">$184,000</span> </h5><hr class="mb-0">
+              </div>
+
+                <div class="d-flex justify-content-center mt-0">
+                  <p class="me-2"> <span class="opacity-75">4</span> <i class="fas fa-bed opacity-50"></i></p>
+                  <p class="mx-2"> <span class="opacity-75">2</span> <i class="fas fa-bath opacity-50"></i></p>
+                  <p class="ms-2"> <span class="opacity-75">1</span> <i class="fas fa-car opacity-50"></i></p>
                 </div>
-              </div>
-              <div class="data" style="z-index: 9999;">
-                <a href="#" class="btn text-white btn-sm mb-1 rounded-3" style="background-color: #07c98b;font-size: 14px;font-weight: 400;padding: 2px 6px;">Varified</a> <br>
-              </div>
-              <div class="heart" style="border-top-right-radius: 9px;width: 322px;height: 210.15px;border-top-left-radius: 12px;">
-                <i class="far fa-heart text-primary px-2 py-2 small bg-white rounded-circle" style="margin-top: 15px;margin-left: 276px;"></i>
-              </div>
             </div>
           </div>
+          
         </div>
-        <button class="slide-prev btn slick-btns me-1 own-slick-left"><i class="bi bi-chevron-left"></i></button>
-        <button class='slide-next btn slick-btns own-slick-right'><i class="bi bi-chevron-right"></i></button>
+        <button class=" btn slick-btns me-1 own-slick-left"><i class="bi bi-chevron-left"></i></button>
+        <button class=' btn slick-btns own-slick-right'><i class="bi bi-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -615,7 +561,7 @@
       <div class="row">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h3 class="me-5">Added Today</h3>
+            <h3 class="me-5 fw-bold">Added Today</h3>
             <a href="#" class="btn px-3 py-2 rounded-3 text-decoration-none smoke-bg fw-normal me-2" style="font-size: 15px;">Apartments</a>
             <a href="#" class="btn px-3 py-2 rounded-3 text-decoration-none bg-white fw-normal mx-2 text-primary" style="font-size: 15px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">Houses</a>
             <a href="#" class="btn px-3 py-2 rounded-3 text-decoration-none smoke-bg fw-normal mx-2" style="font-size: 15px;">Rooms</a>
@@ -712,22 +658,22 @@
     <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between">
-          <h3>Search property by city</h3>
+          <h3 class="fw-bold">Search property by city</h3>
           <a href="" class="text-decoration-none text-black offer">
             <span class="me-2">View all</span><i class="bi bi-arrow-right" style="font-size: 19px;"></i>
           </a>
         </div>
       </div>
-      <div class="row py-5">
-        <div class="search-carousel d-flex justify-content-center">
-          <div class="search-div" style="width: 309.75px;height:335px;border-radius: 17px;">
-            <div class="card search" style="width: 309.75px;height:238.89px;border-radius: 17px;">
-              <div class="search-card shadow-sm">
+      <div class="row position-relative pt-1">
+        <div class="search-carousel d-flex justify-content-center ">
+          <div class="search-div my-1 mx-2" style="border-radius: 16px;">
+            <div class="card search" style="border-radius: 17px;">
+              <div class="search-card">
                 <div class="" style="border-radius: 16px;">
                   <img src="./img/city/new-york.jpg" alt="" class="img-fluid card-img-top search-img">
                 </div>
                 <div class="card-body text-center">
-                  <h6 class="fw-bold fs-5">New York</h6>
+                  <h6 class="fw-bold fs-6">New York</h6>
                 </div>
               </div>
             </div>
@@ -752,14 +698,14 @@
               </div>
         </div>
           </div>
-          <div class="search-div" style="width: 309.75px;height:335px;border-radius: 17px;">
-            <div class="card search" style="width: 309.75px;height:238.89px;border-radius: 17px;">
-              <div class="search-card shadow-sm">
+          <div class="search-div my-1 mx-2" style="border-radius: 16px;">
+            <div class="card search" style="border-radius: 17px;">
+              <div class="search-card">
                 <div class="" style="border-radius: 16px;">
                   <img src="./img/city/chicago.jpg" alt="" class="img-fluid card-img-top search-img">
                 </div>
                 <div class="card-body text-center">
-                  <h6 class="fw-bold fs-5">Chicago</h6>
+                  <h6 class="fw-bold fs-6">Chicago</h6>
                 </div>
               </div>
             </div>
@@ -784,14 +730,14 @@
               </div>
         </div>
           </div>
-          <div class="search-div" style="width: 309.75px;height:335px;border-radius: 17px;">
-            <div class="card search" style="width: 309.75px;height:238.89px;border-radius: 17px;">
-              <div class="search-card shadow-sm">
+          <div class="search-div my-1 mx-2" style="border-radius: 16px;">
+            <div class="card search" style="border-radius: 17px;">
+              <div class="search-card ">
                 <div class="" style="border-radius: 16px;">
                   <img src="./img/city/los-angeles.jpg" alt="" class="img-fluid card-img-top search-img">
                 </div>
                 <div class="card-body text-center">
-                  <h6 class="fw-bold fs-5">Los Angeles</h6>
+                  <h6 class="fw-bold fs-6">Los Angeles</h6>
                 </div>
               </div>
             </div>
@@ -816,14 +762,14 @@
               </div>
         </div>
           </div>
-          <div class="search-div" style="width: 309.75px;height:335px;border-radius: 17px;">
-            <div class="card search" style="width: 309.75px;height:238.89px;border-radius: 17px;">
-              <div class="search-card shadow-sm">
+          <div class="search-div my-1 mx-2" style="border-radius: 16px;">
+            <div class="card search" style="border-radius: 17px;">
+              <div class="search-card">
                 <div class="" style="border-radius: 16px;">
                   <img src="./img/city/san-diego.jpg" alt="" class="img-fluid card-img-top search-img">
                 </div>
                 <div class="card-body text-center">
-                  <h6 class="fw-bold fs-5">San Diego</h6>
+                  <h6 class="fw-bold fs-6">San Diego</h6>
                 </div>
               </div>
             </div>
@@ -848,14 +794,14 @@
               </div>
         </div>
           </div>
-          <div class="search-div" style="width: 309.75px;height:335px;border-radius: 17px;">
-            <div class="card search" style="width: 309.75px;height:238.89px;border-radius: 17px;">
-              <div class="search-card shadow-sm">
+          <div class="search-div my-1 mx-2" style="border-radius: 16px;">
+            <div class="card search" style="border-radius: 17px;">
+              <div class="search-card">
                 <div class="" style="border-radius: 16px;">
                   <img src="./img/city/dallas.jpg" alt="" class="img-fluid card-img-top search-img">
                 </div>
                 <div class="card-body text-center">
-                  <h6 class="fw-bold fs-5">Dallas</h6>
+                  <h6 class="fw-bold fs-6">Dallas</h6>
                 </div>
               </div>
             </div>
@@ -881,10 +827,8 @@
         </div>
           </div>
         </div>
-
-        <button class='slide-prev btn slick-btns me-1 slick-left'><i class="bi bi-chevron-left"></i></button>
-        <button class='slide-next btn slick-btns slick-right'><i class="bi bi-chevron-right"></i></button>
-
+          <button class='slide-prev btn slick-btns slick-left'><i class="bi bi-chevron-left"></i></button>
+          <button class='slide-next btn slick-btns slick-right'><i class="bi bi-chevron-right"></i></button>
       </div>
       
     </div>
@@ -895,43 +839,43 @@
     <div class="container">
       <div class="row">
         <div class="">
-          <h3 >Our partners</h3>
+          <h3 class="fw-bold">Our partners</h3>
         </div>
       </div>
       <div class="row">
         <div class="d-flex py-3">
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/01_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/01_color.svg" alt="" class="convert-to">
             </a>
           </div>
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/02_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/02_color.svg" alt="" class="convert-to">
             </a>
           </div>
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/03_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/03_color.svg" alt="" class="convert-to">
             </a>
           </div>
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/04_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/04_color.svg" alt="" class="convert-to">
             </a>
           </div>
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/05_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/05_color.svg" alt="" class="convert-to">
             </a>
           </div>
           <div class="col-md-2 partner-part">
-            <a href="">
+            <a href="" class="partner_head">
               <img src="./img/Partner_img/06_gray.svg" alt="" class="convert-from">
               <img src="./img/Partner_img/06_color.svg" alt="" class="convert-to">
             </a>
@@ -943,114 +887,125 @@
 
   <!-- agents -->
   <section id="agents">
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
           <div class="">
-            <h3 >Top real estate agents</h3>
+            <h3 class="fw-bold">Top real estate agents</h3>
           </div>
       </div>
 
       <div class="row">
         <div class="d-flex justify-content-center align-items-center">
           <div class="col-md-8">
-            <div class="multiple-items">
-              <div class="me-4" style="width: 420px;height:24rem;">
+            <div class="multiple-items pt-5 pb-3 animate__animated">
+              <div class="me-4 img-over">
                 <img src="./img/Real-Estate agents/01.jpg" alt="" class="w-100 esate_img">
               </div>
-              <div class="me-4" style="width: 420px;height:24rem;">
+              <div class="me-4 img-over">
                 <img src="./img/Real-Estate agents/02.jpg" alt="" class="w-100 esate_img">
               </div>
-              <div class="me-4" style="width: 420px;height:24rem;">
+              <div class="me-4 img-over">
                 <img src="./img/Real-Estate agents/03.jpg" alt="" class="w-100 esate_img">
               </div>
             </div>
           </div>
-          <div class="col-md-4 position-relative" style="right: 65px;">
-            <div class="last_carousel">
-              <div class="px-3 py-4 bg-white shadow-lg position-relative" style="border-radius: 18px;right: 65px;width: 120%;">
-                <h4 class="fs-4" style="font-weight:700;width: 70%;">"Over 10 years of experience as a real estate agent"</h4>
-                <p class="opacity-75" style="font-size: 18px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</p>
-                <div class="d-flex justify-content-between">
-                   <div class="">
-                      <h5 class="mb-0">Kristin Watson</h5>
-                      <p class="opacity-50" style="font-weight: 500;line-height: 22px;">Imperial Property Group Agent</p>
-                   </div>
-                   <div class="">
-                    <div class="">
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    </div>
-                    <p class="opacity-50" style="font-weight: 500;">24 reviews</p>
-                   </div>
+          <div class="col-md-4 position-relative" style="right: 65px;border-radius: 12px;">
+            <div class="rating-carousel">
+              <div class="">
+                <div class="px-4 py-4 bg-white " style="border-radius: 18px;">
+                  <h3 class="fs-4" style="font-weight:700;">"I will select the best acommodation for you"</h3>
+                  <p class="opacity-50 mt-3 agent-txt" style="font-size: 17px;font-weight: 500;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s .</p>
+                  <div class="d-flex justify-content-between">
+                     <div class="">
+                        <h5 class="mb-0" style="font-weight: 650;">Floyd Miles</h5>
+                        <p class="opacity-50" style="font-weight: 500;line-height: 22px;font-size: 15px;">Imperial Property Group Agent</p>
+                     </div>
+                     <div class="">
+                      <div class="">
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      </div>
+                      <p class="opacity-50" style="font-weight: 500;">45 reviews</p>
+                     </div>
+                  </div>
+                  <div class="">
+                    <i class="fab fa-facebook-f final-icon facebook me-2"></i>
+                    <i class="fab fa-twitter final-icon me-2"></i>
+                    <i class="fab fa-linkedin-in final-icon"></i>
+                  </div>
+                  
+                  
                 </div>
-                <div class="">
-                  <i class="fab fa-facebook-f final-icon facebook me-2"></i>
-                  <i class="fab fa-twitter final-icon me-2"></i>
-                  <i class="fab fa-linkedin-in final-icon"></i>
-                </div>
-                <div class="quote"><i class="fas fa-quote-right fa-3x"></i></div>
-                
               </div>
-              <div class="px-3 py-4 bg-white shadow-lg position-relative" style="border-radius: 18px;right: 65px;width: 120%;">
-                <h4 class="fs-4" style="font-weight:700;width: 70%;">"I will select the best acommodation for you"</h4>
-                <p class="opacity-75" style="font-size: 18px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</p>
-                <div class="d-flex justify-content-between">
-                   <div class="">
-                      <h5 class="mb-0">Floyd Miles</h5>
-                      <p class="opacity-50" style="font-weight: 500;line-height: 22px;">Imperial Property Group Agent</p>
-                   </div>
-                   <div class="">
-                    <div class="">
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    </div>
-                    <p class="opacity-50" style="font-weight: 500;">45 reviews</p>
-                   </div>
+              <div class="">
+                <div class="px-4 py-4 bg-white position-relative" style="border-radius: 18px;">
+                  <h3 class="fs-4" style="font-weight:700;width: 85%;">"I don't say no, I just figure out a way to make it work"</h3>
+                  <p class="opacity-50 mt-3 agent-txt" style="font-size: 17px;font-weight: 500;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <div class="d-flex justify-content-between">
+                     <div class="">
+                        <h5 class="mb-0" style="font-weight: 650;">Guy Hawkins</h5>
+                        <p class="opacity-50" style="font-weight: 500;line-height: 22px;font-size: 15px;">Imperial Property Group Agent</p>
+                     </div>
+                     <div class="">
+                      <div class="">
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      </div>
+                      <p class="opacity-50" style="font-weight: 500;">16 reviews</p>
+                     </div>
+                  </div>
+                  <div class="">
+                    <i class="fab fa-facebook-f final-icon facebook me-2"></i>
+                    <i class="fab fa-twitter final-icon me-2"></i>
+                    <i class="fab fa-linkedin-in final-icon"></i>
+                  </div>
+                  
                 </div>
-                <div class="">
-                  <i class="fab fa-facebook-f final-icon facebook me-2"></i>
-                  <i class="fab fa-twitter final-icon me-2"></i>
-                  <i class="fab fa-linkedin-in final-icon"></i>
-                </div>
-                <div class="quote"><i class="fas fa-quote-right fa-3x"></i></div>
-                
               </div>
-              <div class="px-3 py-4 bg-white shadow-lg position-relative" style="border-radius: 18px;right: 65px;width: 120%;">
-                <h4 class="fs-4" style="font-weight:700;width: 70%;">"I don't say no, I just figure out a way to make it work"</h4>
-                <p class="opacity-75" style="font-size: 18px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley .</p>
-                <div class="d-flex justify-content-between">
-                   <div class="">
-                      <h5 class="mb-0">Guy Hawkins</h5>
-                      <p class="opacity-50" style="font-weight: 500;line-height: 22px;">Imperial Property Group Agent</p>
-                   </div>
-                   <div class="">
-                    <div class="">
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    </div>
-                    <p class="opacity-50" style="font-weight: 500;">16 reviews</p>
-                   </div>
+              <div class="">
+                <div class="px-4 py-4 bg-white position-relative" style="border-radius: 18px;">
+                  <h3 class="fs-4" style="font-weight:700;width: 85%;">"Over 10 years of experience as a real estate agent"</h3>
+                  <p class="opacity-50 mt-3 agent-txt" style="font-size: 17px;font-weight: 500;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <div class="d-flex justify-content-between">
+                     <div class="">
+                        <h5 class="mb-0" style="font-weight: 650;">Kristin Watson</h5>
+                        <p class="opacity-50" style="font-weight: 500;line-height: 22px;font-size: 15px;">Imperial Property Group Agent</p>
+                     </div>
+                     <div class="">
+                      <div class="">
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      <i class="fas fa-star star"></i>
+                      </div>
+                      <p class="opacity-50" style="font-weight: 500;">24 reviews</p>
+                     </div>
+                  </div>
+                  <div class="">
+                    <i class="fab fa-facebook-f final-icon facebook me-2"></i>
+                    <i class="fab fa-twitter final-icon me-2"></i>
+                    <i class="fab fa-linkedin-in final-icon"></i>
+                  </div>
+
+                  
                 </div>
-                <div class="">
-                  <i class="fab fa-facebook-f final-icon facebook me-2"></i>
-                  <i class="fab fa-twitter final-icon me-2"></i>
-                  <i class="fab fa-linkedin-in final-icon"></i>
-                </div>
-                <div class="quote"><i class="fas fa-quote-right fa-3x"></i></div>
-                
               </div>
+
+              
             </div>
+            <div class="quote overflow-visible"><i class="fas fa-quote-right fa-3x"></i></div>
           </div>
+         
         </div>
+        <button class=" btn slick-btns me-1 final-slick-left"><i class="bi bi-chevron-left"></i></button>
+        <button class=' btn slick-btns final-slick-right'><i class="bi bi-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -1160,8 +1115,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Back To home button -->
+
+    <div class="back animate__animated">
+      <a href="#navbar">
+        <i class="bi bi-chevron-up text-white"></i>
+      </a>
+    </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script>
       function rangeSlide(value){
@@ -1173,22 +1137,30 @@ $('.my-carousel').slick(
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        speed: 100,
+        speed: 300,
         // slide: ' div',
         cssEase: 'linear',
-        prevArrow:false,
-        nextArrow:false,
+        // arrows:true
     }
 );
 $('.search-carousel').slick(
   {
     infinite:true,
-    speed:300,
+    speed:270,
     slidesToShow:4,
+    cssEase: 'linear',
     slidesToScroll:1,
-    arrows:true
+
   }
 );
+$('.rating-carousel').slick({
+  slidesToShow:1,
+  slidesToScroll:1,
+  infinite:true,
+  arrows:false,
+  fade:true,
+  speed: 250
+})
 
 $('.multiple-items').slick({
   slidesToShow:2,
@@ -1196,14 +1168,10 @@ $('.multiple-items').slick({
   infinite:true,
   prevArrow:false,
   nextArrow:false,
-  speed:200
+  speed: 270,
+  cssEase: 'linear'
 })
-$('.last_carousel').slick({
-  slidesToShow:1,
-  slidesToScroll:1,
-  infinite:true,
-  arrows: true
-})
+
 $('.own-slick-left').click(function(e){
   $('.my-carousel').slick('slickPrev')
 });
@@ -1220,6 +1188,46 @@ $('.slide-next').click(function(e){
 		//e.preventDefault(); 
 		$('.search-carousel').slick('slickNext');
 } );  
+
+$('.final-slick-left').click(function(e){
+  $('.multiple-items').slick('slickPrev');
+  $('.rating-carousel').slick('slickPrev');
+});
+$('.final-slick-right').click(function(e){
+  $('.multiple-items').slick('slickNext');
+  // $('.multiple-items').addClass('animate__animated animate__fadeIn');
+  $('.rating-carousel').slick('slickNext')
+})
+
+
+$(document).ready(function(){
+  $('.blog-dropdown a.blog-drop').on(
+    'mouseover',function(e){
+      $(this).next('ul').removeClass("d-none");
+      $(this).next('ul').addClass("show");
+        // e.stopPropagation();
+        // e.preventDefault();
+    }
+)
+})
+
+
+new Waypoint({
+  element : document.getElementById("offers"),
+  handler : function(direction){
+    if(direction == "down"){
+      document.querySelector(".back").style.display = "block";
+      document.querySelector(".back").classList.add("animate__bounceInRight");
+    }else if(direction == "up"){
+      document.querySelector(".back").classList.replace("animate__bounceInRight","animate__bounceOutRight");
+      setTimeout(function(){
+        document.querySelector(".back").classList.remove("animate__bounceOutRight");
+        document.querySelector(".back").style.display = "none";
+      },300);
+    }
+
+  },offset : "90%"
+})
 
     </script>
   </body>
